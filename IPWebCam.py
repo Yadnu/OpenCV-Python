@@ -2,7 +2,8 @@ import urllib.request
 import cv2
 import numpy as np
 
-
+#### Download the IPWebCam App in your android Mobile and get the IP Address
+#### And edit it in url 
 url="http://192.168.43.1:8080/shot.jpg"
 
 while True:
@@ -10,7 +11,7 @@ while True:
 
     imgResponse = urllib.request.urlopen(url)
 
-
+    
     imgNp = np.array(bytearray(imgResponse.read()),dtype=np.uint8)
 
 
